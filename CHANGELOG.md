@@ -83,3 +83,18 @@ return view('contactpagina', ['contact' => $contact]);
 });
 
 voorbeeld controller: 
+
+//controller aanmaken
+php artisan make:controller DeNaam (UpperCamelCase)
+
+//route naar controller (vb)
+Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index']);
+
+//function in controller (string meegeven)
+class BlogController extends Controller
+{
+public function index()
+{
+return 'My blogs';
+}
+}
