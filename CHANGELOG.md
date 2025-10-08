@@ -21,30 +21,36 @@ Onderzoekers
 Astronomen
 -------------------------------------------------------------------------------+
 Taken:
-- User story
-- ERD
-- Wireframe
-- Routes
-- Models
-- Controllers
-- Views
-- Migrations
-- Eloquent
-- Database opzetten
-- CRUD
-- Register
-- Login
-- Admin
-- Validatie
-- Search
-- Filter
-- Beveiliging
-- Schakelen van status met button in lijst
-- Diepere validatie (kijk in pdf)
-- Styling
-- Data ophalen van API (astronomie data)
-
-Must have!: 
-Should have:
-Could have, maybe:
-Won't have this time, maybe later:
+- User story M
+- ERD M
+- Wireframes (homepage, detailpagina, login, account) C
+- Routes M
+- Models M
+- Controllers M
+- Views M
+- Migrations M
+- Eloquent M
+- Database opzetten M
+- CRUD M
+- Register M
+- Login M
+- Admin M
+- Validatie M
+- Search M
+- Filter M
+- Beveiliging M
+- Schakelen van status met button in lijst (kijk in pdf) M
+- Diepere validatie (kijk in pdf) M
+- Styling S
+- Data ophalen van API (astronomie data) S
+    Astronomie API's:
+    - https://api.le-systeme-solaire.net/en/
+    - https://api.nasa.gov/
+    Geolocatie API:
+    Overige API's:
+  
+Taken rank:
+*Must have!
+*Should have
+*Could have, maybe
+*Won't have this time, maybe later
