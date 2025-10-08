@@ -9,7 +9,12 @@ Dag 1: 08-10-25
 Opdracht - User Stories
 ------------------------------->
 User Story:
-Als astronomie fanaat, wil ik een moderne webapplicatie waar ik de data van sterren en planeten op nationaal niveau kan opzoeken en delen, zodat ik meer te weten kom over wat er in mijn land te zien is aan sterren en planeten.
+*Als astronomie fanaat, *wil ik een moderne webapplicatie waar ik de data van sterren en planeten op nationaal niveau kan opzoeken en delen, *zodat ik meer te weten kom over wat er in mijn land te zien is aan sterren en planeten.
+*Als gebruiker wil ik type sterren filteren op zijn eigenschappen, zodat ik snel kan vinden wat ik zoek.
+*Als gebruiker wil ik sterren en planeten kunnen zoeken op naam, zodat ik snel kan vinden.
+*Als gebruiker wil ik dat al mijn data veilig is, zodat ik me geen zorgen hoef te maken over mijn privacy.
+Als gebruiker wil ik met de geolocatie van mijn apparaat sterren en planeten in mijn omgeving kunnen vinden, zodat ik weet wat ik kan zien.
+*Als gebruiker wil ik een account kunnen aanmaken, waarbij ik mijn voorkeuren kan opslaan.
 ------------------------------------------------------------------------+
 Stakeholders
 
@@ -21,7 +26,10 @@ Onderzoekers
 Astronomen
 -------------------------------------------------------------------------------+
 Taken:
-- User story M
+
+Link trello: 
+
+- User story M V
 - ERD M
 - Wireframes (homepage, detailpagina, login, account) C
 - Routes M
@@ -42,6 +50,7 @@ Taken:
 - Schakelen van status met button in lijst (kijk in pdf) M
 - Diepere validatie (kijk in pdf) M
 - Styling S
+- Agenda W
 - Data ophalen van API (astronomie data) S
     Astronomie API's:
     - https://api.le-systeme-solaire.net/en/
@@ -98,3 +107,5 @@ public function index()
 return 'My blogs';
 }
 }
+
+*in web.php website routes zetten/aanmaken

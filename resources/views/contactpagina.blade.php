@@ -1,2 +1,3 @@
-<h1>About {{$contact}}</h1>
+<h1>About {{$contact}} {{$name}}</h1>
 <p>Lorem ipsum...</p>
+Route::

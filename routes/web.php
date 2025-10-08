@@ -25,10 +25,12 @@ Route::get('/about-us', function() {
 //view
 //geet text mee door een variabele te maken
 //zet de variabele in een array
-Route::get('/contactpagina', function() {
+Route::get('/contactpagina/{name}', function($name) {
     $contact = 'Dit is de contactpagina, bereik ons op: xxx';
-    return view('contactpagina', ['contact' => $contact]);
-});
+    //$name = 'John Doe';
+    //compact zodat je de variabele kan gebruiken in de view
+    return view('contactpagina', ['contact' => $contact], compact(var_name: 'name'));
+})->name('contactpagina');
 
 //controller
 Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index']);
