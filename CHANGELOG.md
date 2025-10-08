@@ -54,3 +54,32 @@ Taken rank:
 *Should have
 *Could have, maybe
 *Won't have this time, maybe later
+-------------------------------------------------------------------------------+
+Oprdracht - ERD
+ Link Miro: https://miro.com/welcomeonboard/ait1M3JYY09OSXRlamJVUjRmWnphUUs2ZVQ4N3FWRndLWFhqbENySld0blFpbm9iRE5SNzZDSzkzSVIvWFlWd3FscFA0Vm1qa2JxTUl6WDdOZ0EyNXhHM3MwSUIrb3NKazJjUzZSZkVjU1p0anlybWRCanduTmkwc3o2Q2ZHcUtBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=199881130666
+-------------------------------------------------------------------------------+
+*
+ctrl c: stop dev process
+ctrl c ^: start dev process
+{{}} <- html entity
+-------------------------------------------------------------------------------+
+Tussenopdracht - les 3 > route en view
+
+voorbeeld route en view:
+
+//get haalt de pagina op
+
+Route::get('/about-us', function() {
+return 'This page is about us';
+});
+
+//maak een view aan
+//geet text mee door een variabele te maken
+//zet de variabele in een array
+
+Route::get('/contactpagina', function() {
+$contact = 'Dit is de contactpagina, bereik ons op: xxx';
+return view('contactpagina', ['contact' => $contact]);
+});
+
+voorbeeld controller: 

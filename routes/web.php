@@ -17,4 +17,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//get haalt de pagina op
+Route::get('/about-us', function() {
+    return 'This page is about us';
+});
+//maak een view aan
+//geet text mee door een variabele te maken
+//zet de variabele in een array
+Route::get('/contactpagina', function() {
+    $contact = 'Dit is de contactpagina, bereik ons op: xxx';
+    return view('contactpagina', ['contact' => $contact]);
+});
+
 require __DIR__.'/auth.php';
+
+
