@@ -8,7 +8,7 @@ Dag 1: 08-10-25
 ---------------------+
 Opdracht - User Stories
 ------------------------------->
-User Story:
+User Stories:
 *Als astronomie fanaat, *wil ik een moderne webapplicatie waar ik de data van sterren en planeten op nationaal niveau kan opzoeken en delen, *zodat ik meer te weten kom over wat er in mijn land te zien is aan sterren en planeten.
 *Als gebruiker wil ik type sterren filteren op zijn eigenschappen, zodat ik snel kan vinden wat ik zoek.
 *Als gebruiker wil ik sterren en planeten kunnen zoeken op naam, zodat ik snel kan vinden.
@@ -27,7 +27,7 @@ Astronomen
 -------------------------------------------------------------------------------+
 Taken:
 
-Link trello: 
+Link trello: https://trello.com/b/8u1MDu5d
 
 - User story M V
 - ERD M
@@ -51,6 +51,7 @@ Link trello:
 - Diepere validatie (kijk in pdf) M
 - Styling S
 - Agenda W
+- Tags W
 - Data ophalen van API (astronomie data) S
     Astronomie API's:
     - https://api.le-systeme-solaire.net/en/
@@ -63,9 +64,6 @@ Taken rank:
 *Should have
 *Could have, maybe
 *Won't have this time, maybe later
--------------------------------------------------------------------------------+
-Oprdracht - ERD
- Link Miro: https://miro.com/welcomeonboard/ait1M3JYY09OSXRlamJVUjRmWnphUUs2ZVQ4N3FWRndLWFhqbENySld0blFpbm9iRE5SNzZDSzkzSVIvWFlWd3FscFA0Vm1qa2JxTUl6WDdOZ0EyNXhHM3MwSUIrb3NKazJjUzZSZkVjU1p0anlybWRCanduTmkwc3o2Q2ZHcUtBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=199881130666
 -------------------------------------------------------------------------------+
 *
 ctrl c: stop dev process
@@ -109,3 +107,14 @@ return 'My blogs';
 }
 
 *in web.php website routes zetten/aanmaken
+-------------------------------------------------------------------------------+
+Dag 2: 13-10-25 
+-------
+      |
+-------
+|
+-------
+---------------------+-------------------------------------------------------------------------------+
+Oprdracht - ERD
+Link DrawSQL: https://drawsql.app/teams/1073500/diagrams/merquery-2-0
+-------------------------------------------------------------------------------+
