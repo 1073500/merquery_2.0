@@ -1,3 +1,11 @@
+Merquery 2.0
+=================
+Studentnummer: 1073500
+----------------------------------------------------------------+
+Linkjes:
+Link GitHub: https://github.com/1073500/merquery_2.0.git
+Link Trello: https://trello.com/b/8u1MDu5d
+Link DrawSQL: https://drawsql.app/teams/1073500/diagrams/merquery-2-0
 ---------------------+
 Dag 1: 08-10-25
     |
@@ -26,8 +34,6 @@ Onderzoekers
 Astronomen
 -------------------------------------------------------------------------------+
 Taken:
-
-Link trello: https://trello.com/b/8u1MDu5d
 
 - User story M V
 - ERD M
@@ -115,6 +121,12 @@ Dag 2: 13-10-25
 |
 -------
 ---------------------+-------------------------------------------------------------------------------+
-Oprdracht - ERD
-Link DrawSQL: https://drawsql.app/teams/1073500/diagrams/merquery-2-0
+Oprdracht les 3 - ERD
 -------------------------------------------------------------------------------+
+Dag 3: 14-10-25, les 4
+-------
+      |
+-------
+      |
+-------
+---------------------+-------------------------------------------------------------------------------+

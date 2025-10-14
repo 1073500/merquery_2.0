@@ -33,7 +33,27 @@ Route::get('/contactpagina/{name}', function($name) {
 })->name('contactpagina');
 
 //controller
-Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index']);
+Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index'])
+->name('blogs');
+//->middleware ('auth'); indienen ingelogd te zijn om de pagina te zien
+
+//2
+Route::get('/homepage', function() {
+    return view ('homepage');
+});
+//3
+Route::get('/contact', function() {
+    return view ('contact');
+});
+//4
+Route::get('/about', function() {
+    return view ('about');
+});
+
+//route controllers
+Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage');
+Route::get('contact', [\App\Http\Controllers\HomepageController::class, 'contact'])->name('contact');
+Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])->name('about');
 
 require __DIR__.'/auth.php';
 
