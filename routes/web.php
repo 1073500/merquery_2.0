@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Content;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,6 +55,8 @@ Route::get('/about', function() {
 Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage');
 Route::get('contact', [\App\Http\Controllers\HomepageController::class, 'contact'])->name('contact');
 Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])->name('about');
+
+Route::get('contents/show', [\App\Http\Controllers\ContentController::class, 'show'])->name('contents.show');
 
 require __DIR__.'/auth.php';
 
