@@ -56,7 +56,9 @@ Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepa
 Route::get('contact', [\App\Http\Controllers\HomepageController::class, 'contact'])->name('contact');
 Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])->name('about');
 
+//crud
 Route::get('contents/show', [\App\Http\Controllers\ContentController::class, 'show'])->name('contents.show');
+Route::get('contents/create', [\App\Http\Controllers\ContentController::class, 'create'])->name('contents.create');
 
 require __DIR__.'/auth.php';
 

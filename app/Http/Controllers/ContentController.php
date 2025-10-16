@@ -10,8 +10,12 @@ class ContentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function show()
+    public function show(Content $content)
     {
+//        $content = Content::findOrFail($id);
+//        if(!$content){
+//            abort(404);
+//        }
         $content = new Content();
         $content->title ='Blue star';
         $content->name = 'Rigel';
@@ -33,17 +37,39 @@ class ContentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Content $content)
     {
-        //
+
+
+        return view('contents.create', compact('content'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
+    //form data
+
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        //validatie
+        $request->validate([
+            'title' => 'required|max:70',
+            'name' => 'required|max:255',
+            'constellation' => 'required|max:255',
+            'city' => 'required|max:255',
+            'town' => 'required|max:255',
+            'province' => 'required|max:255',
+            'country' => 'required|max:255',
+            'date' => 'required|date',
+            'description' => 'required',
+            'type' => 'required|max:255',
+            'image_url' => 'required|url|max:400',
+        ]);
+        //errors tonen
+        //beveiliging
+        //data teruggeven
+        //insert into
     }
 
     /**
