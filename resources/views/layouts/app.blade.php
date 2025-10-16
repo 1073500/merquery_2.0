@@ -28,7 +28,7 @@
       ```
     -->
     <div class="min-h-full">
-        <nav class="bg-gray-800/50">
+        <nav class="bg-gray-900">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
@@ -37,8 +37,9 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                                 @include('layouts.navigation')
+                                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+
                                 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                                 </div>
                                 <!--<a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Home</a>
@@ -124,9 +125,9 @@
             </el-disclosure>
         </nav>
 
-        <header class="relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
+        <header class="relative bg-gray-900 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-black">@isset($heading){{$heading}}@endisset</h1>
+                <h1 class="text-3xl font-bold tracking-tight text-white">@isset($heading){{$heading}}@endisset</h1>
             </div>
         </header>
         <main>
