@@ -33,7 +33,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
 
-                        @include('layouts.navigation')
+
                     <div class="flex items-center">
                         <div class="justify-start shrink-0 ">
                             <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="size-8" />
@@ -43,7 +43,9 @@
                                 @
                                 <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
 
-                                <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                                <div class="">
+                                    @include('layouts.navigation')
+
                                 </div>
                                 <!--<a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Home</a>
                                 <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About Merquery</a>
@@ -52,6 +54,7 @@
                         </div>
                     </div>
                     <div class="hidden md:block">
+
                         <div class="ml-4 flex items-center md:ml-6">
                             <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
                                 <span class="absolute -inset-1.5"></span>
