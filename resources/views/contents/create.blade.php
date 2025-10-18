@@ -110,9 +110,46 @@
             </div>
 
             <div>
-                <label for="constellation">Constellation</label>
-                <select name="constellation" id="">
-                    <option value="">Andromeda</option>
+                <label for="type">Type</label>
+                <select name="type" id="">
+                    <option value="">Asteriod</option>
+                    <option value="">Comet</option>
+                    <option value="">Dwarf Planet</option>
+                    <option value="">Exoplanet</option>
+                    <option value="">Galaxy</option>
+                    <option value="">Nebula</option>
+                    <option value="">Planet</option>
+                    <option value="">Star</option>
+                    <option value="">Star Cluster</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="province">Province</label>
+                <select name="province" id="">
+                    <option value="">Gelderland</option>
+                    <option value="">Limburg</option>
+                    <option value="">Noord-Brabant</option>
+                    <option value="">Noord-Holland</option>
+                    <option value="">Overijssel</option>
+                    <option value="">Utrecht</option>
+                    <option value="">Zeeland</option>
+                    <option value="">Zuid-Holland</option>
+                    <option value="">Drenthe</option>
+                    <option value="">Friesland</option>
+                    <option value="">Groningen</option>
+                    <option value="">Flevoland</option>
+                    <option value="">Antwerpen</option>
+                    <option value="">Henegouwen/Hainaut</option>
+                    <option value="">Luik/Liège/Lüttich</option>
+                    <option value="">Limburg (BE)</option>
+                    <option value="">Luxemburg/Luxembourg (BE)</option>
+                    <option value="">Namen/Namur</option>
+                    <option value="">Oost-Vlaanderen/Flandre-Orientale</option>
+                    <option value="">Vlaams-Brabant</option>
+                    <option value="">West-Vlaanderen/Flandre-Occidentale</option>
+                    <option value="">Waals-Brabant/Brabant Wallon</option>
 
 
                 </select>
