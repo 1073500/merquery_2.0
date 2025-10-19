@@ -11,6 +11,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body class="bg-gray-950 relative min-h-screen overflow-hidden">
 
 {{--body class="bg-gray-950 bg-[url('/images/mequery-bg-6.png')] bg-cover bg-center h-screen--}}
@@ -24,11 +25,10 @@
     </nav>
 
     <header class=" text-white">
-        <div class=" m-16 text-4xl font-bold text-center mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="">@isset($heading)
-                    {{$heading}}
-                @endisset</h1>
-
+        <div class=" m-16 text-4xl font-bold text-center mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+            @isset($heading)
+                {{$heading}}
+            @endisset
         </div>
     </header>
 
@@ -36,14 +36,9 @@
         <div class=" text-white mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <!-- Slotted content -->
             <div class="text-center">
-                @isset($title)
-                    <h1>{{$title}}</h1>
-                @endisset
-            </div>
-            @isset($create)
-                <h1>{{$create}}</h1>
-            @endisset
-        </div>
+                @isset($section)
+                    <h1>{{$section}}</h1>
+        @endisset
     </main>
     <footer>
         @include('layouts.footer')
