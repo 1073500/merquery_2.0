@@ -51,6 +51,14 @@ Route::get('/about', function() {
     return view ('about');
 });
 
+//Route::get('/contents/show/{content}', function() {
+//    return view ('contents.show');
+//})->name('contents.show');
+//
+//Route::get('/contents/create', function() {
+//    return view ('contents.create');
+//})->name('contents.create');
+
 //route controllers
 Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage');
 Route::get('contact', [\App\Http\Controllers\HomepageController::class, 'contact'])->name('contact');

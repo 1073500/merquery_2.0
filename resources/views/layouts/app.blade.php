@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-950 relative min-h-screen overflow-hidden">
+<body class="bg-gray-950 relative min-h-screen">
 
 {{--body class="bg-gray-950 bg-[url('/images/mequery-bg-6.png')] bg-cover bg-center h-screen--}}
 
@@ -38,7 +38,14 @@
             <div class="text-center">
                 @isset($section)
                     <h1>{{$section}}</h1>
-        @endisset
+                @endisset
+            </div>
+        </div>
+        <div>
+            @isset($create)
+                <h1>{{$create}}</h1>
+            @endisset
+        </div>
     </main>
     <footer>
         @include('layouts.footer')
