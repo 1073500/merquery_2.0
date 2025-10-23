@@ -149,3 +149,6 @@ php artisan migrate
 Tabel update:
 php artisan migrate:fresh
 -------------------------------------------------------------------------------+
+23-10-25:
+Meet Eloquent tutorial opnieuw volgen om te kijken wat ik heb gemist.
+-------------------------------------------------------------------------------+
