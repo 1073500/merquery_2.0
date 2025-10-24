@@ -152,3 +152,8 @@ php artisan migrate:fresh
 23-10-25:
 Meet Eloquent tutorial opnieuw volgen om te kijken wat ik heb gemist.
 -------------------------------------------------------------------------------+
+24-10-25:
+- Correcte view voor de content gemaakt (show content heeft niet de juiste code).
+Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te gebruiken.
+- content in nav gaat niet naar de juiste view:
+-------------------------------------------------------------------------------+

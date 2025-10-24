@@ -46,6 +46,11 @@
                 <h1>{{$create}}</h1>
             @endisset
         </div>
+        <div class="text-white">
+            @isset($Content)
+                <h1>{{$Content}}</h1>
+            @endisset
+        </div>
     </main>
     <footer>
         @include('layouts.footer')

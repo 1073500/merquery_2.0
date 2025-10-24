@@ -51,14 +51,15 @@ Route::get('/about', function() {
     return view ('about');
 });
 
-Route::get('/contents/{id}', function($id) {
-    $content = Content::find($id);
-    return view ('contents.show', ['content' => $content]);
-});
+
 //
 Route::get('/contents/create', function() {
     return view ('contents.create');
 })->name('contents.create');
+
+Route::get('/contents', function() {
+    return view('contents', ['contents' => Content::all()]);
+})->name('contents');
 
 //route controllers
 Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage');
@@ -67,13 +68,9 @@ Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])-
 
 //'contents/show/'{content}
 //crud
-Route::get('contents/show', [\App\Http\Controllers\ContentController::class, 'show'])->name('contents.show');
+
 Route::get('contents/create', [\App\Http\Controllers\ContentController::class, 'create'])->name('contents.create');
-
-Route::post('/contents/show', function (){
-    dd('Formulier verzonden');
-});
-
+Route::get('contents', [\App\Http\Controllers\ContentController::class, 'contents'])->name('contents');
 require __DIR__.'/auth.php';
 
 
