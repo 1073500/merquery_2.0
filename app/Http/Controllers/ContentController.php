@@ -10,6 +10,13 @@ class ContentController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function index()
+    {
+        $contents = Content::all();
+        return view('contents.index', compact('contents'));
+    }
+
     public function show(Content $content)
     {
 //
@@ -27,7 +34,7 @@ class ContentController extends Controller
     //select
     public function create()
     {
-       $content = Content::all();
+        $content = Content::all();
 
         return view('contents.create', compact('content'));
     }
@@ -108,17 +115,17 @@ class ContentController extends Controller
             'type' => 'required|max:255',
 //            'image_url' => 'required|url|max:400',
         ]);
-
-        $content->title = $request->input('title');
-        $content->name = $request->input('name');
-        $content->constellation = $request->input('constellation');
-        $content->city = $request->input('city');
-        $content->town = $request->input('town');
-        $content->province = $request->input('province');
-        $content->country = $request->input('country');
-        $content->date = $request->input('date');
-        $content->description = $request->input('description');
-        $content->type = $request->input('type');
+        $content->update($request->all());
+//        $content->title = $request->input('title');
+//        $content->name = $request->input('name');
+//        $content->constellation = $request->input('constellation');
+//        $content->city = $request->input('city');
+//        $content->town = $request->input('town');
+//        $content->province = $request->input('province');
+//        $content->country = $request->input('country');
+//        $content->date = $request->input('date');
+//        $content->description = $request->input('description');
+//        $content->type = $request->input('type');
 //        $content->image_url = $request->input('image_url');
         $content->save();
 

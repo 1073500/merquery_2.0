@@ -161,3 +161,7 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 - $content->user geeft null terug, maar in de lijst met alle content is de user wel zichtbaar. Tinker geeft aan dat de relatie goed is opgezet.
 - show weggehaald, omdat ik de fout had gemaakt om die blade gewoon content te noemen.
 - door php artisan tinker uit te testen met de create geeft hij true aan dus moet ik nu kijken hoe ik de create in de browser kan krijgen.
+-------------------------------------------------------------------------------+
+26-10-25:
+- hard refresh in de browser en cache legen het om veranderingen bij de routes te zien.
+- nav opgeschoond. Nu werken de crud links.
