@@ -112,8 +112,7 @@
                         </div>
                         <div class="ml-3">
                             <p class="text-sm text-gray-300">Phone</p>
-                            <a href="tel:+244941540352" class="text-white hover:text-blue-400 transition">+31 6 12345678<
-                                /a>
+                            <a href="" class="text-white hover:text-blue-400 transition">+31 6 12345678</a>
                         </div>
                     </li>
                 </ul>

@@ -165,3 +165,7 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 26-10-25:
 - hard refresh in de browser en cache legen het om veranderingen bij de routes te zien.
 - nav opgeschoond. Nu werken de crud links.
+- detail pagina werkt, maar nog steeds nieuwe content met tinker:(
+- waar oude value in description textarea?
+- routs bekijken met: php artisan route:list
+- ! crud werkt niet in de browser !

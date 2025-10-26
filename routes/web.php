@@ -52,33 +52,19 @@ Route::get('/about', function () {
     return view('about');
 });
 
-//Route::get('/contents/show', function () {
-//    return view('contents.show');
-//});
-//
-//Route::get('/contents/index', function () {
-//    return view('contents.index');
-//});
-//
-//Route::get('/contents/edit', function () {
-//    return view('contents.edit');
-//});
-
-//Route::post('/content', function (){
-//    dd(request()->all());
-//});
-
 //route controllers
 Route::get('homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage');
 Route::get('contact', [\App\Http\Controllers\HomepageController::class, 'contact'])->name('contact');
 Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])->name('about');
 
 //crud
+Route::resource('contents', ContentController::class);
+
 //Route::get('/contents/create', [ContentController::class, 'create'])->name('contents.create');
 //Route::post('/contents.show', [ContentController::class, 'store'])->name('contents.store');
 //Route::get('/contents.show', [ContentController::class, 'contents.show'])->name('contents.show');
 //Route::get('/contents.index', [ContentController::class, 'contents.index'])->name('contents.index');
-Route::resource('contents', ContentController::class);
+
 
 require __DIR__ . '/auth.php';
 
