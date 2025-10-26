@@ -169,4 +169,5 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 - ! waar oude value in description textarea?
 - routes bekijken met: php artisan route:list
 - ! crud werkt niet in de browser !
-- ! validation is niet te zien !
+- ! nog niet alle validation, want validation is niet te zien !
+- ! login en register van laravel gebruikt, werkt nog niet helemaal :( !

@@ -16,21 +16,12 @@
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         {{--                        title--}}
                         <div class="sm:col-span-4">
-                            <label for="title" class="block text-sm/6 font-medium text-white">Title</label>
+                            <x-input-label for="title">Title</x-input-label>
                             <div class="mt-2">
-                                <div
-                                    class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
-                                    <input id="title"
-                                           type="text"
-                                           name="title"
-                                           placeholder="Sunshine" required
-                                           value="{{ old('title') }}"
-                                           class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
-
-                                    @error('title')
-                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                                    @enderror
+                                <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
+                                    <x-text-input name="title" id="title" placeholder="Sunshine" required></x-text-input>
                                 </div>
+                                <x-input-error :messages="$errors->get('title')"/>
                                 <div>
                                     <p class="mt-3 text-sm/6 text-gray-400">Create a fun title.</p>
                                 </div>
