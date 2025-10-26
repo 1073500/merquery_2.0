@@ -14,36 +14,48 @@
                         will be visible to all users.</p>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        {{--                        title--}}
                         <div class="sm:col-span-4">
                             <label for="title" class="block text-sm/6 font-medium text-white">Title</label>
                             <div class="mt-2">
                                 <div
                                     class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
-                                    <input id="title" type="text" name="title" placeholder="Blue Star" required
+                                    <input id="title"
+                                           type="text"
+                                           name="title"
+                                           placeholder="Sunshine" required
+                                           value="{{ old('title') }}"
                                            class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
-                                    @error('title')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
 
+                                    @error('title')
+                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div>
+                                    <p class="mt-3 text-sm/6 text-gray-400">Create a fun title.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    {{--name--}}
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-4">
                             <label for="name" class="block text-sm/6 font-medium text-white">Name</label>
                             <div class="mt-2">
                                 <div
                                     class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
-                                    <input id="name" type="text" name="name" placeholder="Rigel"
+                                    <input id="name"
+                                           type="text"
+                                           name="name"
+                                           placeholder="Sun"
+                                           value="{{ old('name') }}"
                                            class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                {{--type--}}
                 <div class="border-b border-white/10 pb-12">
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
@@ -64,13 +76,13 @@
                                 <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
                                      class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4">
 
-                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25
+                                    <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25
                                     3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                                    clip-rule="evenodd" fill-rule="evenodd"/>
+                                          clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
                         </div>
-
+                        {{--constellation--}}
                         <div class="sm:col-span-3">
                             <label for="constellation"
                                    class="block text-sm/6 font-medium text-white">Constellation</label>
@@ -174,7 +186,7 @@
                                 </svg>
                             </div>
                         </div>
-
+                        {{--country--}}
                         <div class="sm:col-span-3">
                             <label for="country" class="block text-sm/6 font-medium text-white">Country</label>
                             <div class="mt-2 grid grid-cols-1">
@@ -191,7 +203,7 @@
                                 </svg>
                             </div>
                         </div>
-
+                        {{--province--}}
                         <div class="sm:col-span-3">
                             <label for="province" class="block text-sm/6 font-medium text-white">Province</label>
                             <div class="mt-2 grid grid-cols-1">
@@ -199,28 +211,17 @@
                                         class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
                                     <option value="Gelderland">Gelderland</option>
                                     <option value="Limburg">Limburg</option>
-                                    --}}
                                     <option value="Noord-Brabant">Noord-Brabant</option>
-                                    --}}
                                     <option value="Noord-Holland">Noord-Holland</option>
-                                    --}}
                                     <option value="Overijssel">Overijssel</option>
-                                    --}}
                                     <option value="Utrecht">Utrecht</option>
-                                    --}}
                                     <option value="Zeeland">Zeeland</option>
-                                    --}}
                                     <option value="Zuid-Holland">Zuid-Holland</option>
-                                    --}}
                                     <option value="Drenthe">Drenthe</option>
-                                    --}}
                                     <option value="Friesland">Friesland</option>
-                                    --}}
                                     <option value="Groningen">Groningen</option>
-                                    --}}
                                     <option value="Flevoland">Flevoland</option>
-                                    --}}
-                                    <option value="Antwerpwn">Antwerpen</option>
+                                    <option value="Antwerpen">Antwerpen</option>
                                     <option value="Henegouwen/Hainaut">Henegouwen/Hainaut</option>
                                     <option value="Luik/Liège/Lüttich<">Luik/Liège/Lüttich</option>
                                     <option value="Limburg (BE)">Limburg (BE)</option>
@@ -243,35 +244,50 @@
                                 </svg>
                             </div>
                         </div>
+                        {{--                        city--}}
                         <div class="sm:col-span-2">
                             <label for="city" class="block text-sm/6 font-medium text-white">City</label>
                             <div class="mt-2">
-                                <input id="city" type="text" name="city" placeholder="Capelle aan den IJssel"
+                                <input id="city"
+                                       type="text"
+                                       name="city"
+                                       placeholder="Arnhem"
+                                       value="{{ old('city') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
                         </div>
-
+                        {{--town--}}
                         <div class="sm:col-span-2">
                             <label for="town" class="block text-sm/6 font-medium text-white">Town</label>
                             <div class="mt-2">
-                                <input id="town" type="text" name="town" placeholder="s'Gravenland"
+                                <input id="town"
+                                       type="text"
+                                       name="town"
+                                       placeholder="Elden"
+                                       value="{{ old('town') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
                         </div>
-
+                        {{--date--}}
                         <div class="sm:col-span-2">
                             <label for="date" class="block text-sm/6 font-medium text-white">Date</label>
                             <div class="mt-2">
-                                <input id="date" type="date" name="date" placeholder=""
+                                <input id="date"
+                                       type="date"
+                                       name="date"
+                                       placeholder=""
+                                       value="{{ old('date') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
                         </div>
 
-
+                        {{--description--}}
                         <div class="col-span-full mb-4">
                             <label for="description" class="block text-sm/6 font-medium text-white">Description</label>
                             <div class="mt-2">
-                                <textarea id="description" name="description" rows="3"
+                                <textarea id="description"
+                                          name="description"
+                                          rows="3"
                                           class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"></textarea>
                             </div>
                             <p class="mt-3 text-sm/6 text-gray-400">Add extra information about your post.</p>
@@ -310,6 +326,14 @@
                     </div>
                 </div>
             </div>
+            @if($errors->any())
+                <ul>
+                    @foreach($errors->all() as $errors)
+                        <li>{{ $errors }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
         </form>
     </x-slot>
 </x-app-layout>

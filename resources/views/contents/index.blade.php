@@ -5,11 +5,16 @@
         </div>
     </x-slot>
     <x-slot name="Content">
-    @foreach($contents as $content)
-        <li>
-            <a href="{{ route('contents.show', $content) }}" class="hover:text-blue-500"><strong>{{ $content['title'] }}:</strong> Constellation {{ $content['constellation'] }}
-            </a>
-        </li>
-    @endforeach
+        <div class="m-5">
+            @foreach($contents as $content)
+                <a href="{{ route('contents.show', $content) }}">
+                    <li class="transform transition duration-300 hover:scale-110 hover:cursor-grab  hover:bg-gray-800 m-2 p-2 bg-gray-900 border border-gray-800 rounded-lg">
+                        <strong>{{ $content['title'] }}:</strong>
+                        <p>Type {{ $content['type'] }}</p>
+                        <p>Constellation {{ $content['constellation'] }}</p>
+                    </li>
+                </a>
+            @endforeach
+        </div>
     </x-slot>
 </x-app-layout>

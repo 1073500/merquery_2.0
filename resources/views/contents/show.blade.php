@@ -9,9 +9,9 @@
             <h2 class="text-xl font-bold mb-2 ">{{ $content['title'] }}</h2>
             <p class="mb-1 text-gray-300"><strong>Constellation:</strong> {{ $content['constellation'] }}</p>
             <p class="mb-1 text-gray-300"><strong>Description:</strong> {{ $content['description'] }}</p>
-            <p class="mb-1 text-gray-300"><strong>Created At:</strong> {{ $content['created_at'] }}</p>
+            <p class="mb-1 text-gray-300"><strong>Created at:</strong> {{ $content['created_at'] }}</p>
             <div>
-                <a class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition" href="/contents/{{ $content->id }}/edit">Edit</a>
+                <a class="bg-gray-950 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition" href="/contents/{{ $content->id }}/edit">Edit</a>
             </div>
         </div>
 
