@@ -155,5 +155,9 @@ Meet Eloquent tutorial opnieuw volgen om te kijken wat ik heb gemist.
 24-10-25:
 - Correcte view voor de content gemaakt (show content heeft niet de juiste code).
 Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te gebruiken.
-- content in nav gaat niet naar de juiste view:
+- content in nav gaat niet naar de juiste view: ?
 -------------------------------------------------------------------------------+
+25-10-25:
+- $content->user geeft null terug, maar in de lijst met alle content is de user wel zichtbaar. Tinker geeft aan dat de relatie goed is opgezet.
+- show weggehaald, omdat ik de fout had gemaakt om die blade gewoon content te noemen.
+- door php artisan tinker uit te testen met de create geeft hij true aan dus moet ik nu kijken hoe ik de create in de browser kan krijgen.

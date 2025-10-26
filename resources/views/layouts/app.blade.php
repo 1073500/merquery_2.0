@@ -42,9 +42,9 @@
             </div>
         </div>
         <div>
-            @isset($create)
-                <h1>{{$create}}</h1>
-            @endisset
+            @if (isset($create))
+                {{ $create }}
+            @endif
         </div>
         <div class="text-white">
             @isset($Content)

@@ -18,15 +18,16 @@ return new class extends Migration
             $table->string('constellation');
             $table->tinyText('description');
             $table->string('type');
-            $table->string('image_url');
+//            $table->string('image_url');
             $table->string('country');
             $table->string('city');
             $table->string('town');
             $table->string('province');
             $table->date('date');
-            $table->string('views')->default(0);
-            $table->foreignId('user_id')->constrained();
+            $table->unsignedInteger('views')->default(0);
+            $table->foreignId('user_id')->nullable()->constrained();
             $table->timestamps();
+
 
         });
     }
