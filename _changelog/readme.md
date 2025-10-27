@@ -171,3 +171,6 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 - ! crud werkt niet in de browser !
 - ! nog niet alle validation, want validation is niet te zien !
 - ! login en register van laravel gebruikt, werkt nog niet helemaal :( !
+--------------------------------------------------------------------------+
+27-10-25:
+- crud gefixed door herd secure, nu crud en validation afmaken
