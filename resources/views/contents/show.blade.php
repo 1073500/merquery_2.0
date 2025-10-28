@@ -10,10 +10,10 @@
             <p class="mb-1 text-gray-300"><strong>Constellation:</strong> {{ $content['constellation'] }}</p>
             <p class="mb-1 text-gray-300"><strong>Description:</strong> {{ $content['description'] }}</p>
             <p class="mb-1 text-gray-300"><strong>Created at:</strong> {{ $content['created_at'] }}</p>
-            <div>
+            <div class="">
                 <a class="bg-gray-950 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition" href="/contents/{{ $content->id }}/edit">Edit</a>
+                <a class="bg-red-700 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition" href="/contents/{{ $content->id }}">Delete</a>
             </div>
         </div>
-
     </x-slot>
 </x-app-layout>

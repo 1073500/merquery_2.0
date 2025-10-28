@@ -68,6 +68,7 @@ Route::resource('contents', ContentController::class);
 //Auth
 Route::get('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'create']);
 Route::post('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
+
 require __DIR__ . '/auth.php';
 
 

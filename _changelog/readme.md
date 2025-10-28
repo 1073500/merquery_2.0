@@ -174,3 +174,10 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 --------------------------------------------------------------------------+
 27-10-25:
 - crud gefixed door herd secure, nu crud en validation afmaken
+---------------------------------------------------------------------------+
+28-10-23:
+- crud afmaken, nog steeds:|
+- update probleem opgelost door route goed aan te geven en method patch aan te roepen
+- description verplichting weghalen
+- delete toevoegen
+- login afmaken

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('name');
             $table->string('constellation');
-            $table->tinyText('description')->nullable();
+            $table->tinyText('description');
             $table->string('type');
 //            $table->string('image_url');
             $table->string('country');

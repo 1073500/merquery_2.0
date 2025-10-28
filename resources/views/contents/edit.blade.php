@@ -5,8 +5,9 @@
                 <h1>Edit a post</h1>
             </div>
         </x-slot>
-        <form class="m-4" method="POST" action="{{ route('contents.store') }}">
+        <form class="m-4" method="POST" action="{{ route('contents.update', $content->id) }}">
             @csrf
+            @method('PATCH');
 
             <div class="space-y-12">
                 <div class="border-b border-white/10 pb-12">
@@ -350,5 +351,6 @@
                 </div>
             </div>
         </form>
+
     </x-slot>
 </x-app-layout>

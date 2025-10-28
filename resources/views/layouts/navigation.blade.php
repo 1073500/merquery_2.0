@@ -8,5 +8,7 @@
         <x-menu-link class="" href="{{ route('contents.index') }}">All Contents</x-menu-link>
         {{-- <x-menu-link class="" href="{{ route('contents.show', $content->id) }}">Details</x-menu-link> --}}
         <x-menu-link class="" href="{{ route('contents.create') }}">Create</x-menu-link>
+        <x-menu-link class="" href="{{ route('login') }}">Login</x-menu-link>
+        <x-menu-link class="" href="{{ route('register') }}">Register</x-menu-link>
     </div>
 </nav>

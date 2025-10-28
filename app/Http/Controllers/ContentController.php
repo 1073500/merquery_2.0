@@ -58,7 +58,7 @@ class ContentController extends Controller
             'province' => 'required|max:255',
             'country' => 'required|max:255',
             'date' => 'required|date',
-            'description' => 'required',
+            'description',
             'type' => 'required|max:255',
 //            'image_url' => 'required|url|max:400',
         ]);
@@ -111,7 +111,7 @@ class ContentController extends Controller
             'province' => 'required|max:255',
             'country' => 'required|max:255',
             'date' => 'required|date',
-            'description' => 'required',
+            'description',
             'type' => 'required|max:255',
 //            'image_url' => 'required|url|max:400',
         ]);
