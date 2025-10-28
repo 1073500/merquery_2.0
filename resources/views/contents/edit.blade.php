@@ -7,6 +7,7 @@
         </x-slot>
         <form class="m-4" method="POST" action="{{ route('contents.store') }}">
             @csrf
+
             <div class="space-y-12">
                 <div class="border-b border-white/10 pb-12">
                     <h2 class="text-base/7 text-white"><strong>Edit: </strong>{{ $content->title }}</h2>
