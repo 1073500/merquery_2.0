@@ -184,4 +184,5 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 ---------------------------------------------------------------------------+
 - 29-10-25
 - Login en logout succesvol toegevoegd
-- 
+- logout en destroy blade verwijderd, deze waren onnodig
+- delete toegevoegd
