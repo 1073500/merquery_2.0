@@ -14,5 +14,6 @@ class Content extends Model
     {
         //een op veel
         return $this->belongsTo(User::class);
+        return $this->belongsTo(Tag::class);
     }
 }

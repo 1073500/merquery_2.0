@@ -2,6 +2,11 @@
     <x-slot name="heading">
         <div class="m-2">
             <h1>Dashboard</h1>
+            @auth
+                @if (auth()->user()->isAdmin())
+                    <p>geheimpje</p>
+                @endif
+            @endauth
         </div>
     </x-slot>
 

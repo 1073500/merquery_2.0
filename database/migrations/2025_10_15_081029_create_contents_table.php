@@ -25,7 +25,8 @@ return new class extends Migration
             $table->string('province');
             $table->date('date');
             $table->unsignedInteger('views')->default(0);
-            $table->foreignId('user_id')->nullable()->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('tag_id')->nullable()->constrained();
             $table->timestamps();
 
 

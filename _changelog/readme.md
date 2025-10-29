@@ -186,3 +186,8 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 - Login en logout succesvol toegevoegd
 - logout en destroy blade verwijderd, deze waren onnodig
 - delete toegevoegd
+- @auth en @guest toegevoegd in nav
+- admin_flag in de db
+- Middleware voor auth:
+De Kernel bepaalt welke filters en beveiligingslagen elk verzoek moet doorlopen.
+- 

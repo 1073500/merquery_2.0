@@ -60,14 +60,22 @@ Route::get('about', [\App\Http\Controllers\HomepageController::class, 'about'])-
 //crud
 Route::resource('contents', ContentController::class);
 
-//Route::get('/contents/create', [ContentController::class, 'create'])->name('contents.create');
-//Route::post('/contents.show', [ContentController::class, 'store'])->name('contents.store');
-//Route::get('/contents.show', [ContentController::class, 'contents.show'])->name('contents.show');
-//Route::get('/contents.index', [ContentController::class, 'contents.index'])->name('contents.index');
-
 //Auth
 Route::get('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'create']);
 Route::post('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
+
+//Admin
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::resource('admin/contents', ContentController::class);
+});
+
+Route::middleware(['web'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth']);
+});
+
 
 require __DIR__ . '/auth.php';
 
