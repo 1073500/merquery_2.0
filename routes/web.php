@@ -40,7 +40,7 @@ Route::get('blogs', [\App\Http\Controllers\BlogController::class, 'index'])
 //->middleware ('auth'); indienen ingelogd te zijn om de pagina te zien
 
 //2
-Route::get('/homepage', function () {
+Route::get('/', function () {
     return view('homepage');
 });
 //3
