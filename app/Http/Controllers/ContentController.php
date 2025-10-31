@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Content;
 use Illuminate\Http\Request;
+use App\Rules\ValidDutchOrBelgianCity;
 
 class ContentController extends Controller
 {
@@ -13,8 +14,21 @@ class ContentController extends Controller
 
     public function index()
     {
-        $contents = Content::all();
+        //$contents = Content::all();
+
+        //search
+        $contents = Content::orderBy('created_at', 'DESC');
+
+        if (request()->filled('search')) {
+            $search = request()->get('search', '');
+            $contents = $contents->where('title',  'like', '%' . $search . '%');
+        }
+        $contents = $contents->paginate(3);
+
         return view('contents.index', compact('contents'));
+
+
+
     }
 
     public function show(Content $content)
@@ -53,7 +67,7 @@ class ContentController extends Controller
             'title' => 'required|max:70',
             'name' => 'required|max:255',
             'constellation' => 'required|max:255',
-            'city' => 'required|max:255',
+            'city' => ['string', new ValidDutchOrBelgianCity],
             'town' => 'required|max:255',
             'province' => 'required|max:255',
             'country' => 'required|max:255',

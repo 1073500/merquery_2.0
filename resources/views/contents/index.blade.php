@@ -2,6 +2,10 @@
     <x-slot name="heading">
         <div class="m-2">
             <h1>Contents Page</h1>
+            <div class="m-6">
+                @include('components.search-bar')
+            </div>
+
         </div>
     </x-slot>
     <x-slot name="Content">
@@ -15,6 +19,9 @@
                     </li>
                 </a>
             @endforeach
+                <div class="mt-4">
+                    {{ $contents->links() }}
+                </div>
         </div>
     </x-slot>
 </x-app-layout>

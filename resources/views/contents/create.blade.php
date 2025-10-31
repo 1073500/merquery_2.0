@@ -19,7 +19,7 @@
                             <x-input-label for="title">Title</x-input-label>
                             <div class="mt-2">
                                 <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
-                                    <x-text-input name="title" id="title" placeholder="Sunshine" required></x-text-input>
+                                    <x-text-input name="title" id="title" placeholder="Sunshine" ></x-text-input>
                                 </div>
                                 <x-input-error :messages="$errors->get('title')"/>
                                 <div>
@@ -31,7 +31,7 @@
                     {{--name--}}
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-4">
-                            <label for="name" class="block text-sm/6 font-medium text-white">Name</label>
+                            <x-input-label for="name">Name</x-input-label>
                             <div class="mt-2">
                                 <div
                                     class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
@@ -42,6 +42,7 @@
                                            value="{{ old('name') }}"
                                            class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
                                 </div>
+                                <x-input-error :messages="$errors->get('title')"/>
                             </div>
                         </div>
                     </div>
@@ -50,7 +51,7 @@
                 <div class="border-b border-white/10 pb-12">
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
-                            <label for="type" class="block text-sm/6 font-medium text-white">Type</label>
+                            <x-input-label for="type">Type</x-input-label>
                             <div class="mt-2 grid grid-cols-1">
                                 <select id="type" name="type"
                                         class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
@@ -72,11 +73,11 @@
                                           clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('type')"/>
                         </div>
                         {{--constellation--}}
                         <div class="sm:col-span-3">
-                            <label for="constellation"
-                                   class="block text-sm/6 font-medium text-white">Constellation</label>
+                            <x-input-label for="constellation">Constellation</x-input-label>
                             <div class="mt-2 grid grid-cols-1">
                                 <select id="constellation" name="constellation"
                                         class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
@@ -176,10 +177,11 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('constellation')"/>
                         </div>
                         {{--country--}}
                         <div class="sm:col-span-3">
-                            <label for="country" class="block text-sm/6 font-medium text-white">Country</label>
+                            <x-input-label for="country">Country</x-input-label>
                             <div class="mt-2 grid grid-cols-1">
                                 <select id="country" name="country"
                                         class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
@@ -193,10 +195,11 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('country')"/>
                         </div>
                         {{--province--}}
                         <div class="sm:col-span-3">
-                            <label for="province" class="block text-sm/6 font-medium text-white">Province</label>
+                            <x-input-label for="province">Province</x-input-label>
                             <div class="mt-2 grid grid-cols-1">
                                 <select id="province" name="province" autocomplete="province"
                                         class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white/5 py-1.5 pr-8 pl-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
@@ -234,10 +237,11 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('province')"/>
                         </div>
                         {{--                        city--}}
                         <div class="sm:col-span-2">
-                            <label for="city" class="block text-sm/6 font-medium text-white">City</label>
+                            <x-input-label for="city">City</x-input-label>
                             <div class="mt-2">
                                 <input id="city"
                                        type="text"
@@ -246,10 +250,11 @@
                                        value="{{ old('city') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('city')"/>
                         </div>
                         {{--town--}}
                         <div class="sm:col-span-2">
-                            <label for="town" class="block text-sm/6 font-medium text-white">Town</label>
+                            <x-input-label for="town">Town</x-input-label>
                             <div class="mt-2">
                                 <input id="town"
                                        type="text"
@@ -258,10 +263,11 @@
                                        value="{{ old('town') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('town')"/>
                         </div>
                         {{--date--}}
                         <div class="sm:col-span-2">
-                            <label for="date" class="block text-sm/6 font-medium text-white">Date</label>
+                            <x-input-label for="date">Date</x-input-label>
                             <div class="mt-2">
                                 <input id="date"
                                        type="date"
@@ -270,6 +276,7 @@
                                        value="{{ old('date') }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('date')"/>
                         </div>
 
                         {{--description--}}

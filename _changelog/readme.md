@@ -190,4 +190,6 @@ Dit heb ik opgelost door een nieuwe view te maken voor de content en foreach te 
 - admin_flag in de db
 - Middleware voor auth:
 De Kernel bepaalt welke filters en beveiligingslagen elk verzoek moet doorlopen.
+------------------------------------------------------------------------------------+
+30-10-25
 - 
