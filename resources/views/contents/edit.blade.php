@@ -26,14 +26,11 @@
                                     <input id="title"
                                            type="text"
                                            name="title"
-                                           placeholder="Blue Star" required
+                                           placeholder="Blue Star"
                                            value="{{ $content->title }}"
                                            class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
-                                    @error('title')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-
                                 </div>
+                                <x-input-error :messages="$errors->get('title')"/>
                             </div>
                         </div>
                     </div>
@@ -53,6 +50,7 @@
                                         class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"/>
                                 </div>
                             </div>
+                            <x-input-error :messages="$errors->get('name')"/>
                         </div>
                     </div>
                 </div>
@@ -80,11 +78,12 @@
                                 <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
                                      class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4">
 
-                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25
+                                    <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25
                                     3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
                                     clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('type')"/>
                         </div>
 
                         <div class="sm:col-span-3">
@@ -191,6 +190,7 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('constellation')"/>
                         </div>
 
                         <div class="sm:col-span-3">
@@ -210,6 +210,7 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('country')"/>
                         </div>
 
                         <div class="sm:col-span-3">
@@ -265,6 +266,7 @@
                                         clip-rule="evenodd" fill-rule="evenodd"/>
                                 </svg>
                             </div>
+                            <x-input-error :messages="$errors->get('province')"/>
                         </div>
                         <div class="sm:col-span-2">
                             <label for="city"
@@ -277,6 +279,7 @@
                                        value="{{ $content->city }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('city')"/>
                         </div>
 
                         <div class="sm:col-span-2">
@@ -290,6 +293,7 @@
                                        value="{{ $content->town }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('town')"/>
                         </div>
 
                         <div class="sm:col-span-2">
@@ -302,6 +306,7 @@
                                        value="{{ $content->date }}"
                                        class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"/>
                             </div>
+                            <x-input-error :messages="$errors->get('date')"/>
                         </div>
 
 

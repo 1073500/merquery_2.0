@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Content;
 use Illuminate\Http\Request;
 use App\Rules\ValidDutchOrBelgianCity;
+use App\Models\Tag;
 
 class ContentController extends Controller
 {
@@ -21,12 +22,11 @@ class ContentController extends Controller
 
         if (request()->filled('search')) {
             $search = request()->get('search', '');
-            $contents = $contents->where('title',  'like', '%' . $search . '%');
+            $contents = $contents->where('title', 'like', '%' . $search . '%');
         }
         $contents = $contents->paginate(3);
 
         return view('contents.index', compact('contents'));
-
 
 
     }
@@ -72,10 +72,13 @@ class ContentController extends Controller
             'province' => 'required|max:255',
             'country' => 'required|max:255',
             'date' => 'required|date',
-            'description',
+            'description' => 'nullable|string',
             'type' => 'required|max:255',
+            'tags' => 'nullable|string',
 //            'image_url' => 'required|url|max:400',
         ]);
+
+
 
 
         //insert into
@@ -92,6 +95,19 @@ class ContentController extends Controller
         $content->type = $request->input('type');
 //        $content->image_url = $request->input('image_url');
         $content->save();
+
+//        //tag
+//        if (!empty($validated['tags'])) {
+//            $tags = json_decode($validated['tags']); // JSON naar array
+//            $tagIds = [];
+//
+//            foreach ($tags as $tagName) {
+//                $tag = Tag::firstOrCreate(['tag_name' => $tagName]); // bestaand tag gebruiken of nieuwe aanmaken
+//                $tagIds[] = $tag->id;
+//            }
+//
+//            $content->tags()->sync($tagIds);
+//        }
 
         //redirect
         return redirect()->route('contents.show', $content->id);
@@ -127,6 +143,7 @@ class ContentController extends Controller
             'date' => 'required|date',
             'description',
             'type' => 'required|max:255',
+            'tags' => 'nullable|string',
 //            'image_url' => 'required|url|max:400',
         ]);
         $content->update($request->all());
@@ -141,7 +158,25 @@ class ContentController extends Controller
 //        $content->description = $request->input('description');
 //        $content->type = $request->input('type');
 //        $content->image_url = $request->input('image_url');
+
         $content->save();
+//        //tags
+//        if ($request->filled('tags')) {
+//            $tags = json_decode($request->input('tags'), true);
+//            if (!is_array($tags)) $tags = [];
+//
+//            $tagIds = [];
+//            foreach ($tags as $tagName) {
+//                $tag = \App\Models\Tag::firstOrCreate(['tag_name' => $tagName]);
+//                $tagIds[] = $tag->id;
+//            }
+//
+//            $content->tags()->sync($tagIds);
+//        } else {
+//            $content->tags()->sync([]); // alle tags verwijderen als geen tags aanwezig
+//        }
+
+
 
         return redirect()->route('contents.show', $content->id);
     }

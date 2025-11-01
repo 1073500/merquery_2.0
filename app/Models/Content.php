@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Models\Tag;
+use Illuminate\Http\Request;
 
 class Content extends Model
 {
+
     protected $fillable = [
         'title', 'name', 'constellation', 'city', 'town',
         'province', 'country', 'date', 'description', 'type'
@@ -14,6 +19,11 @@ class Content extends Model
     {
         //een op veel
         return $this->belongsTo(User::class);
-        return $this->belongsTo(Tag::class);
     }
+
+    public function tags(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class, 'content_tag_correct', 'content_id', 'tag_id');
+    }
+
 }
