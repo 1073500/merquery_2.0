@@ -66,14 +66,9 @@ Route::post('/register', [\App\Http\Controllers\Auth\RegisteredUserController::c
 
 //Admin
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard')->middleware('isAdmin');
     Route::resource('admin/contents', ContentController::class);
-});
-
-Route::middleware(['web'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth']);
+    Route::get('admin/homepage', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('admin.homepage')->middleware('isAdmin');
 });
 
 

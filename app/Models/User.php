@@ -49,13 +49,13 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'admin_flag' => 'boolean',
         ];
     }
 
     public function isAdmin(): bool
     {
         return $this->admin_flag === 1;
+        //1 ? 1 : 0 voor :int
     }
 
     //relatie

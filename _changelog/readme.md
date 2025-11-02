@@ -196,4 +196,7 @@ De Kernel bepaalt welke filters en beveiligingslagen elk verzoek moet doorlopen.
 ------------------------------------------------------------------------------------+
 1-11-25
 - form validate
-- 
+--------------------------+
+- 2-11-25
+- user zichtbaar op content
+- filter op datum

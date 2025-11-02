@@ -24,7 +24,24 @@ class ContentController extends Controller
             $search = request()->get('search', '');
             $contents = $contents->where('title', 'like', '%' . $search . '%');
         }
+
+        //filter met merQUERY
+        $contents = Content::query();
+
+        if ($sort = request()->get('sort')) {
+            if ($sort === 'created_at_desc') {
+                $contents = $contents->orderBy('created_at', 'DESC');
+            } elseif ($sort === 'created_at_asc') {
+                $contents = $contents->orderBy('created_at', 'ASC');
+            }
+        } else {
+            $contents = $contents->orderBy('created_at', 'DESC');
+        }
+
+
         $contents = $contents->paginate(3);
+
+
 
         return view('contents.index', compact('contents'));
 
@@ -46,6 +63,8 @@ class ContentController extends Controller
     //model
     //meesturen view
     //select
+
+
     public function create()
     {
         $content = Content::all();
@@ -94,6 +113,8 @@ class ContentController extends Controller
         $content->description = $request->input('description');
         $content->type = $request->input('type');
 //        $content->image_url = $request->input('image_url');
+        $content->user_id = auth()->id();
+
         $content->save();
 
 //        //tag

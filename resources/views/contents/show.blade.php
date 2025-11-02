@@ -7,6 +7,7 @@
     <x-slot name="Content" class="">
         <div class="m-2 p-2 bg-gray-900 border border-gray-800 rounded-lg">
             <h2 class="text-xl font-bold mb-2 ">{{ $content['title'] }}</h2>
+            <p class="mb-1 text-gray-300"><strong>Created by:</strong> {{ $content->user->username ?? 'Unknown' }}</p>
             <p class="mb-1 text-gray-300"><strong>Constellation:</strong> {{ $content['constellation'] }}</p>
             <p class="mb-1 text-gray-300"><strong>Description:</strong> {{ $content['description'] }}</p>
             <p class="mb-1 text-gray-300"><strong>Created at:</strong> {{ $content['created_at'] }}</p>
