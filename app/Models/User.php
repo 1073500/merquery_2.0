@@ -55,7 +55,6 @@ class User extends Authenticatable
     public function isAdmin(): bool
     {
         return $this->admin_flag === 1;
-        //1 ? 1 : 0 voor :int
     }
 
     //relatie

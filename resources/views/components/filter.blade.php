@@ -1,7 +1,7 @@
 <div>
     <x-input-label class="hidden" for="filter">Filter</x-input-label>
     <div class="flex items-start">
-        <p class=""><strong>Filter:</strong></p>
+        <p class=""><strong>Filters:</strong></p>
         <form action="{{ route('contents.index') }}" method="GET">
             <input
                 type="hidden"

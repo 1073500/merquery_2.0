@@ -117,19 +117,6 @@ class ContentController extends Controller
 
         $content->save();
 
-//        //tag
-//        if (!empty($validated['tags'])) {
-//            $tags = json_decode($validated['tags']); // JSON naar array
-//            $tagIds = [];
-//
-//            foreach ($tags as $tagName) {
-//                $tag = Tag::firstOrCreate(['tag_name' => $tagName]); // bestaand tag gebruiken of nieuwe aanmaken
-//                $tagIds[] = $tag->id;
-//            }
-//
-//            $content->tags()->sync($tagIds);
-//        }
-
         //redirect
         return redirect()->route('contents.show', $content->id);
     }
