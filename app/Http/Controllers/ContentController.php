@@ -16,9 +16,9 @@ class ContentController extends Controller
     public function index()
     {
         //$contents = Content::all();
-
+        $contents = Content::query();
         //search
-        $contents = Content::orderBy('created_at', 'DESC');
+        //$contents = Content::orderBy('created_at', 'DESC');
 
         if (request()->filled('search')) {
             $search = request()->get('search', '');
@@ -26,7 +26,7 @@ class ContentController extends Controller
         }
 
         //filter met merQUERY
-        $contents = Content::query();
+
 
         if ($sort = request()->get('sort')) {
             if ($sort === 'created_at_desc') {
@@ -39,7 +39,7 @@ class ContentController extends Controller
         }
 
 
-        $contents = $contents->paginate(3);
+        $contents = $contents->paginate(6);
 
 
 
@@ -168,21 +168,6 @@ class ContentController extends Controller
 //        $content->image_url = $request->input('image_url');
 
         $content->save();
-//        //tags
-//        if ($request->filled('tags')) {
-//            $tags = json_decode($request->input('tags'), true);
-//            if (!is_array($tags)) $tags = [];
-//
-//            $tagIds = [];
-//            foreach ($tags as $tagName) {
-//                $tag = \App\Models\Tag::firstOrCreate(['tag_name' => $tagName]);
-//                $tagIds[] = $tag->id;
-//            }
-//
-//            $content->tags()->sync($tagIds);
-//        } else {
-//            $content->tags()->sync([]); // alle tags verwijderen als geen tags aanwezig
-//        }
 
 
 

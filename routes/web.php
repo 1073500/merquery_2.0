@@ -64,6 +64,11 @@ Route::resource('contents', ContentController::class);
 Route::get('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'create']);
 Route::post('/register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
 
+Route::middleware('auth')->group(function () {
+    Route::get('/contents/create', [ContentController::class, 'create'])->name('contents.create');
+    Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
+});
+
 //Admin
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard')->middleware('isAdmin');
