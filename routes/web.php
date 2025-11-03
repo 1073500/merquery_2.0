@@ -67,6 +67,9 @@ Route::post('/register', [\App\Http\Controllers\Auth\RegisteredUserController::c
 Route::middleware('auth')->group(function () {
     Route::get('/contents/create', [ContentController::class, 'create'])->name('contents.create');
     Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
+    Route::get('/contents/{content}/edit', [ContentController::class, 'edit'])->name('contents.edit');
+    Route::put('/contents/{content}', [ContentController::class, 'update'])->name('contents.update');
+    Route::delete('/contents/{content}', [ContentController::class, 'destroy'])->name('contents.destroy');
 });
 
 //Admin
